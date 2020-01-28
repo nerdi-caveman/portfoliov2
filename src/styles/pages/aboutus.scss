@@ -1,0 +1,66 @@
+#about-us, #contactus {
+    padding: 90px;
+
+    #expertise {
+        margin: 20px 0;
+
+        h3 {
+            font-size: 2.4rem;
+            margin: 1.2rem 0;
+        }
+
+        p {
+            font-size: 0.87rem;
+            font-family: 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.2rem;
+            color: #ccc;
+        }
+
+        #wwd {
+            margin: 70px 0 50px;
+
+            h4 {
+                font-weight: 300;
+                font-family: 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color: #ccc;
+                font-size: 0.85rem;
+            }
+
+            li {
+                line-height: 1.3rem;
+                font-size: 0.87rem;
+                font-family: 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                display: block;
+                font-weight: 400;
+            }
+
+            ul {
+                margin: 7px 0;
+            }
+        }
+    }
+}
+#about-us{
+    margin-bottom: 50px;
+}
+
+// Responsiveness
+@media only screen and (max-width: 768px) {
+    #about-us {
+        padding: 50px 50px;
+
+        #expertise.row {
+            flex-direction: column;
+        }
+    }
+}
+
+@media only screen and (max-width: 441px) {
+    #about-us {
+        padding: 30px 30px;
+
+        #expertise #wwd ul {
+            margin: 7px 15px 7px 0;
+        }
+    }
+}

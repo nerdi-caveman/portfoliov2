@@ -1,0 +1,40 @@
+.row {
+    display: flex;
+    flex-direction: row;
+
+    .col-5 {
+        flex: 0.5;
+    }
+
+    .col-4 {
+        flex: 0.4;
+    }
+
+    .col-6 {
+        flex: 0.6;
+    }
+
+    .col-2 {
+        flex: 0.2;
+    }
+
+    .col-1 {
+        flex: 0.1;
+    }
+
+    .col-3 {
+        flex: 0.3;
+    }
+
+    .col-8 {
+        flex: 0.8;
+    }
+
+    .col-9 {
+        flex: 0.9;
+    }
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
