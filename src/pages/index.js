@@ -24,7 +24,6 @@ const query = graphql`
 `
 
 const IndexPage = () => {
-  console.log(query)
   useEffect(() => {
     if (
       /iPhone|iPad|Android|Blackberry|iPod/.test(window.navigator.userAgent)

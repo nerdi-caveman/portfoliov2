@@ -8,14 +8,24 @@ body {
     // background: #000;
     // background: #fff;
     height: 100vh;
-    transition: all .45s ease;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    -ms-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
 
-    &.maximusActive{
+    &.simaActive {
+        background: $purple;
+
+        .project-title h2 {
+            color: $teal !important;
+        }
+    }
+
+    &.maximusActive {
         background: $yellow;
 
-        .project-title h2{
+        .project-title h2 {
             color: #fff !important;
-            transition: color .25s ease;
         }
     }
 
@@ -64,7 +74,7 @@ html {
     text-align: right;
 }
 
-.grid-1{
+.grid-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto auto auto auto;
@@ -78,7 +88,8 @@ html {
         ". culture-2 . .";
 
 }
-.grid-2{
+
+.grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto auto auto auto;
@@ -131,16 +142,16 @@ html {
 
             &#sima {
                 p {
-                    color: #44dfd7;
-                    
+                    color: $teal;
+
                 }
 
                 .project-tag {
                     li {
-                        color: #44dfd7;
+                        color: $teal;
 
                         &::before {
-                            color: #44dfd7;
+                            color: $teal;
                         }
                     }
                 }
@@ -156,18 +167,18 @@ html {
                 // align-items: flex-end;
                 // margin-right: 100px;
 
-                .img_container{
+                .img_container {
                     position: relative;
                     overflow: hidden;
 
-                    img{
-                        position: absolute;
-                        top: 0px;
-                        left: 0px;
-                        width: 100%;
-                        height: 100%;
-                        // object-fit: cover;
-                        // object-position: center center;
+                    img {
+                        transform-origin: center top;
+                        transform: scaleY(1.15);
+                        transition: all 1000ms ease 0s !important;
+
+                        &.active {
+                            transform: scaleY(1);
+                        }
                     }
                 }
 
@@ -180,28 +191,30 @@ html {
                     // background: rgba($purple, .2);
                 }
 
-                &.event-1{
+                &.event-1 {
                     grid-area: event-1 / event-1 / event-1 / event-1;
                 }
-                &.event-2{
+
+                &.event-2 {
                     grid-area: event-2 / event-2 / event-2 / event-2;
                 }
-                &.event-3{
+
+                &.event-3 {
                     grid-area: event-3 / event-3 / event-3 / event-3;
                 }
 
                 p {
                     margin-top: 13px;
-                    font-size: 16px;
+                    font-size: 17px;
                     font-family: 'Nunito sans';
                     font-kerning: 12px;
-                    text-transform: uppercase;
+                    // text-transform: uppercase;
                 }
 
                 .project-tag {
                     text-align: left;
                     margin-top: 15px;
-                    margin-left: 15px;
+                    margin-left: 12px;
 
                     li {
                         display: inline-block;
@@ -213,7 +226,7 @@ html {
                         &::before {
                             position: absolute;
                             content: "#";
-                            left: -12px;
+                            left: -10px;
                         }
                     }
                 }
@@ -237,13 +250,14 @@ html {
             line-height: 100%;
             font-size: 12.35vw;
             font-family: aktiv-grotesk-extended, sans-serif;
-            font-family:AVALANCHE, serif;
+            font-family: AVALANCHE, serif;
             font-weight: 900;
             font-style: normal;
             text-transform: uppercase;
             z-index: -1;
             color: rgba(255, 255, 255, 0.9);
             color: #44dfd7;
+            transition: color .35s ease;
             -webkit-text-stroke: 1px transparent;
 
             &.outer {
@@ -321,4 +335,28 @@ html {
             }
         }
     }
+}
+
+@media only screen and (max-width:1024px) {
+
+    .grid-1,
+    .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+            ". event-1 event-1 event-1"
+            "event-2 event-2 . ."
+            ". culture-1 culture-1 ."
+            ". event-3 event-3 event-3"
+            "event-4 event-4 event-4 .";
+    }
+
+    #project,
+    #skills {
+        position: relative;
+        margin: 50px 15px;
+        margin-top: 60vh;
+    }
+
 }

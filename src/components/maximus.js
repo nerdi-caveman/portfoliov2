@@ -1,21 +1,64 @@
-import React from "react"
-import ScrollMagic from './scrollmagic'
-import img1 from "../images/sima2.png"
-import sima2 from "../images/graffiti_inscriptions_art_letters_wall_118776_3840x2400.jpg"
-import { useEffect } from "react"
+import React, { useEffect } from "react"
+import ScrollMagic from "./scrollmagic"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 const Maximus = () => {
-    useEffect(()=>{
-        const trigger = document.querySelector('#maximus');
+  const data = useStaticQuery(graphql`
+    query {
+      imgOne: file(relativePath: { eq: "sima2.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imgTwo: file(
+        relativePath: {
+          eq: "graffiti_inscriptions_art_letters_wall_118776_3840x2400.jpg"
+        }
+      ) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
-        const mainScene = new ScrollMagic({trigger, hook: 0.6});
+  useEffect(() => {
+    const trigger = document.querySelector("#maximus")
 
-        mainScene.on(function(){
-            document.querySelector('body').classList.add('maximusActive')
-        }, function(){
-            document.querySelector('body').classList.remove('maximusActive')
-        })
-    })
+    const mainScene = new ScrollMagic({ trigger, hook: 0.6 })
+
+    mainScene.on(
+      function() {
+        document.querySelector("body").classList.add("maximusActive")
+      },
+      function() {
+        document.querySelector("body").classList.remove("maximusActive")
+      }
+    )
+  })
+
+  //   Animate in images
+  useEffect(() => {
+    const triggers = document.querySelectorAll("#maximus img")
+    for (let i in Array.from(triggers)) {
+      const trigger = triggers[i]
+      const mainScene = new ScrollMagic({ trigger, hook: 0.75 })
+
+      mainScene.on(
+        function() {
+          triggers[i].classList.add("active")
+        },
+        function() {
+          triggers[i].classList.remove("active")
+        }
+      )
+    }
+  })
   return (
     <div className="project-container" id="maximus">
       <div className="project-title">
@@ -27,8 +70,12 @@ const Maximus = () => {
       <div className="grid-1">
         <div className="img event-1">
           <div className="img_container">
-            <div style={{ width: "100%", paddingBottom: "62%" }}></div>
-            <img src={img1} />
+            <Img
+              fluid={data.imgOne.childImageSharp.fluid}
+              alt="Cat taking up an entire chair"
+              fadeIn={true}
+              placeholderStyle={{ backgroundColor: `black` }}
+            />
           </div>
           <p>
             <a href="" target="_blank">
@@ -50,8 +97,12 @@ const Maximus = () => {
         </div>
         <div className="img event-2">
           <div className="img_container">
-            <div style={{ width: "100%", paddingBottom: "70%" }}></div>
-            <img src={sima2} />
+            <Img
+              fluid={data.imgTwo.childImageSharp.fluid}
+              alt="Cat taking up an entire chair"
+              fadeIn={true}
+              placeholderStyle={{ backgroundColor: `black` }}
+            />
           </div>
           <p>
             A web app for managing school records. A dark theme mode, timetable,

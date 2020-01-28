@@ -1,8 +1,7 @@
-import React from "react"
+import React, { useEffect } from "react"
+import ScrollMagic from "./scrollmagic"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import img1 from "../images/sima2.png"
-import sima2 from "../images/graffiti_inscriptions_art_letters_wall_118776_3840x2400.jpg"
 
 const Sima = () => {
   const data = useStaticQuery(graphql`
@@ -14,7 +13,11 @@ const Sima = () => {
           }
         }
       }
-      imgTwo: file(relativePath: { eq: "graffiti_inscriptions_art_letters_wall_118776_3840x2400.jpg" }) {
+      imgTwo: file(
+        relativePath: {
+          eq: "graffiti_inscriptions_art_letters_wall_118776_3840x2400.jpg"
+        }
+      ) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -23,7 +26,39 @@ const Sima = () => {
       }
     }
   `)
-  console.log(data)
+
+  useEffect(() => {
+    const trigger = document.querySelector("#sima")
+
+    const mainScene = new ScrollMagic({ trigger, hook: 0.6 })
+
+    mainScene.on(
+      function() {
+        document.querySelector("body").classList.add("simaActive")
+      },
+      function() {
+        document.querySelector("body").classList.remove("simaActive")
+      }
+    )
+  })
+
+  //   Animate in images
+  useEffect(() => {
+    const triggers = document.querySelectorAll("#sima img")
+    for (let i in Array.from(triggers)) {
+      const trigger = triggers[i]
+      const mainScene = new ScrollMagic({ trigger, hook: 0.75 })
+
+      mainScene.on(
+        function() {
+          triggers[i].classList.add("active")
+        },
+        function() {
+          triggers[i].classList.remove("active")
+        }
+      )
+    }
+  })
 
   return (
     <div className="project-container" id="sima">
@@ -37,7 +72,7 @@ const Sima = () => {
             <Img
               fluid={data.imgOne.childImageSharp.fluid}
               alt="Cat taking up an entire chair"
-              fadeIn="true"
+              fadeIn={true}
               placeholderStyle={{ backgroundColor: `black` }}
             />
           </div>
@@ -47,12 +82,7 @@ const Sima = () => {
             </a>{" "}
             is a web app for managing school records. A dark theme mode,
             timetable, manage students, staff, and classroom records, mark day
-            to day attendance. No external UI components were used, datatable,
-            modals/pop ups coded by me
-            <span role="img" aria-label="true">
-              😊
-            </span>
-            .
+            to day attendance.
           </p>
           <ul className="project-tag">
             <li>React</li>
@@ -68,15 +98,12 @@ const Sima = () => {
             <Img
               fluid={data.imgTwo.childImageSharp.fluid}
               alt="Cat taking up an entire chair"
-              fadeIn="true"
+              fadeIn={true}
               placeholderStyle={{ backgroundColor: `black` }}
             />
           </div>
-          <p>
-            A web app for managing school records. A dark theme mode, timetable,
-            manage students, staff, and classroom records, mark day to day
-            attendance. No external UI components were used, datatable,
-            modals/pop ups coded by me
+          <p>No external UI components were used, datatable, modals/pop ups coded
+            by me
             <span role="img" aria-label="true">
               😊
             </span>
