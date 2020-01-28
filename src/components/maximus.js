@@ -71,7 +71,7 @@ const Maximus = () => {
             />
           </div>
           <p>
-            <a href="" target="_blank">
+            <a href="https://maximus.inioluwa.com" target="_blank">
               Maximus
             </a>{" "}
             is an e-commerce template for managing school records. A dark theme
