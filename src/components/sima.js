@@ -107,6 +107,42 @@ const Sima = () => {
             .
           </p>
         </div>
+        <div className="img culture-1">
+          <div className="img_container">
+            <Img
+              fluid={data.imgTwo.childImageSharp.fluid}
+              alt="Cat taking up an entire chair"
+              fadeIn={true}
+              placeholderStyle={{ backgroundColor: `black` }}
+            />
+          </div>
+          <p>
+            No external UI components were used, datatable, modals/pop ups coded
+            by me
+            <span role="img" aria-label="true">
+              😊
+            </span>
+            .
+          </p>
+        </div>
+        <div className="img event-3">
+          <div className="img_container">
+            <Img
+              fluid={data.imgTwo.childImageSharp.fluid}
+              alt="Cat taking up an entire chair"
+              fadeIn={true}
+              placeholderStyle={{ backgroundColor: `black` }}
+            />
+          </div>
+          <p>
+            No external UI components were used, datatable, modals/pop ups coded
+            by me
+            <span role="img" aria-label="true">
+              😊
+            </span>
+            .
+          </p>
+        </div>
       </div>
     </div>
   )

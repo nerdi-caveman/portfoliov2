@@ -1,12 +1,12 @@
 @import "./utils/variables.scss";
 @import "./layout/arrow.scss";
 
-html{
+html {
     overflow-x: hidden;
 }
 
 body {
-    background: $darkBlue;
+    // background: $darkBlue;
     background: #f3e8e8;
     // background: #000;
     // background: #fff;
@@ -204,6 +204,14 @@ html {
 
                 &.event-3 {
                     grid-area: event-3 / event-3 / event-3 / event-3;
+                }
+
+                &.event-4 {
+                    grid-area: event-4 / event-4 / event-4 / event-4;
+                }
+
+                &.culture-1 {
+                    grid-area: culture-1 / culture-1 / culture-1 / culture-1;
                 }
 
                 p {
