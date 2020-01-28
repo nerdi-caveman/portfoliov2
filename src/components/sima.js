@@ -6,18 +6,14 @@ import Img from "gatsby-image"
 const Sima = () => {
   const data = useStaticQuery(graphql`
     query {
-      imgOne: file(relativePath: { eq: "2953211.jpg" }) {
+      imgOne: file(relativePath: { eq: "sima1test.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      imgTwo: file(
-        relativePath: {
-          eq: "3072518.jpg"
-        }
-      ) {
+      imgTwo: file(relativePath: { eq: "PMVCYM0.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -77,7 +73,7 @@ const Sima = () => {
             />
           </div>
           <p>
-            <a href="" target="_blank">
+            <a href="https://sima.netlify.com" target="_blank" rel ="noopener noreferrer">
               Sima
             </a>{" "}
             is a web app for managing school records. A dark theme mode,
@@ -102,7 +98,8 @@ const Sima = () => {
               placeholderStyle={{ backgroundColor: `black` }}
             />
           </div>
-          <p>No external UI components were used, datatable, modals/pop ups coded
+          <p>
+            No external UI components were used, datatable, modals/pop ups coded
             by me
             <span role="img" aria-label="true">
               😊
