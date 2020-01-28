@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 const Sima = () => {
   const data = useStaticQuery(graphql`
     query {
-      imgOne: file(relativePath: { eq: "sima2.png" }) {
+      imgOne: file(relativePath: { eq: "2953211.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -15,7 +15,7 @@ const Sima = () => {
       }
       imgTwo: file(
         relativePath: {
-          eq: "graffiti_inscriptions_art_letters_wall_118776_3840x2400.jpg"
+          eq: "3072518.jpg"
         }
       ) {
         childImageSharp {

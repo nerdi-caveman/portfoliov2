@@ -1,27 +1,13 @@
 import React from "react"
 import Img from "gatsby-image"
-import { graphql } from "gatsby"
 import "../styles/app.scss"
 import { useEffect } from "react"
 import Cursor from "../components/cursor"
 import Helmet from "react-helmet"
-import img1 from "../images/sima2.png"
-import sima2 from "../images/graffiti_inscriptions_art_letters_wall_118776_3840x2400.jpg"
 import { ParallaxProvider, Parallax } from "react-scroll-parallax"
 import Sima from "../components/sima"
 import Maximus from "../components/maximus"
 
-const query = graphql`
-  query {
-    file(relativePath: { eq: "images/gatsby-astronaut.png" }) {
-      childImageSharp {
-        fixed(width: 125, height: 125) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`
 
 const IndexPage = () => {
   useEffect(() => {
