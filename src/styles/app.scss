@@ -1,6 +1,9 @@
 @import "./utils/variables.scss";
 @import "./layout/arrow.scss";
 
+html{
+    overflow-x: hidden;
+}
 
 body {
     background: $darkBlue;
@@ -249,6 +252,7 @@ html {
             // transform: translateY(-50%);
             line-height: 100%;
             font-size: 12.35vw;
+            width: 43vw;
             font-family: aktiv-grotesk-extended, sans-serif;
             font-family: AVALANCHE, serif;
             font-weight: 900;
@@ -347,6 +351,30 @@ html {
         grid-template-areas:
             ". event-1 event-1 event-1"
             "event-2 event-2 . ."
+            ". culture-1 culture-1 ."
+            ". event-3 event-3 event-3"
+            "event-4 event-4 event-4 .";
+    }
+
+    #project,
+    #skills {
+        position: relative;
+        margin: 50px 15px;
+        margin-top: 60vh;
+    }
+
+}
+
+@media only screen and (max-width:441px) {
+
+    .grid-1,
+    .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+            ". event-1 event-1 event-1"
+            "event-2 event-2 event-2 ."
             ". culture-1 culture-1 ."
             ". event-3 event-3 event-3"
             "event-4 event-4 event-4 .";

@@ -63,9 +63,8 @@ const Maximus = () => {
     <div className="project-container" id="maximus">
       <div className="project-title">
         <h2 className="outer">
-          Maxi <br /> mus
+          Maximus
         </h2>
-        {/* <h2 className="inner">SIMA SMS</h2> */}
       </div>
       <div className="grid-1">
         <div className="img event-1">

@@ -28,5 +28,13 @@
 }
 
 * {
-    cursor:  none;
+    cursor: none;
+}
+
+.ismobile {
+
+    #cursor,
+    #cursor-follower {
+        display: none;
+    }
 }
