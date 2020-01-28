@@ -7,7 +7,7 @@ html{
 
 body {
     background: $darkBlue;
-    // background: #17232f;
+    background: #f3e8e8;
     // background: #000;
     // background: #fff;
     height: 100vh;
@@ -292,7 +292,7 @@ html {
             font-style: normal;
             // color: #fff;
             // color: #000;
-            -webkit-text-stroke: 1px rgba($white, 0.1);
+            -webkit-text-stroke: 1px rgba($white, 1);
             position: relative;
             text-transform: uppercase;
             width: max-content;
