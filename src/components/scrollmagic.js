@@ -18,9 +18,7 @@ const ScrollMagic = function({ trigger, hook = 0.5 }) {
 }
 
 ScrollMagic.prototype.init = function() {
-  console.log(this.trigger.getBoundingClientRect().y)
   if (this.trigger.getBoundingClientRect().y <= this.hook) {
-    console.log(this.trigger.getBoundingClientRect().y)
     this.inCallback()
   }
 
