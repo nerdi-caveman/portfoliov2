@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Software Engineer`,
+    description: `Inioluwa Sogelola is a software engineer based in Ibdan, NG who specializes in developing (and occasionally designing) exceptional, high-quality websites and applications.`,
+    author: `inioluwwa.4is@gmail.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

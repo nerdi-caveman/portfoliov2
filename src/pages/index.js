@@ -1,13 +1,12 @@
 import React from "react"
-import Img from "gatsby-image"
 import "../styles/app.scss"
 import { useEffect } from "react"
 import Cursor from "../components/cursor"
+import SEO from "../components/seo"
 import Helmet from "react-helmet"
 import { ParallaxProvider, Parallax } from "react-scroll-parallax"
 import Sima from "../components/sima"
 import Maximus from "../components/maximus"
-
 
 const IndexPage = () => {
   useEffect(() => {
@@ -40,12 +39,24 @@ const IndexPage = () => {
       <Helmet>
         <link rel="stylesheet" href="https://use.typekit.net/fgw7kgu.css" />
       </Helmet>
+      <SEO
+        description="Inioluwa Sogelola is a software engineer based in Ibdan, NG who specializes in developing (and occasionally designing) exceptional, high-quality websites and applications."
+        lang="en"
+        title="Inioluwa Sogelola"
+        meta={[
+          {
+            "name": "keywords",
+            "content":
+              "Inioluwa Sogelola, Inioluwa, Sogelola, nerdi_caveman, nerdi-caveman, software engineer, software developer, frontend developer, front-end engineer, web developer, javascript, typescript, nigeria, remote, freelance",
+          },
+        ]}
+      />
       <main>
         <Cursor />
         <section id="home">
           <div className="intro-text">
             <h2 className="text-one">Software</h2>
-            <h2 className="text-two">developer</h2>
+            <h2 className="text-two">Engineer</h2>
           </div>
         </section>
         <section id="project">
@@ -57,7 +68,7 @@ const IndexPage = () => {
           {/* <Img fixed={query.file.childImageSharp.fixed} /> */}
           <div className="projects">
             <Sima />
-            <Maximus/>
+            <Maximus />
           </div>
         </section>
         <section id="skills">
