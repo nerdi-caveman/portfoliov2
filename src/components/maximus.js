@@ -2,18 +2,21 @@ import React, { useEffect } from "react"
 import ScrollMagic from "./scrollmagic"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import MaximusMp4 from "../images/Maximus.mp4"
+// import MaximusOgg from "../images/maximusogg.ogg"
+// import Video from "./gatsby-video"
 
 const Maximus = () => {
   const data = useStaticQuery(graphql`
     query {
-      imgOne: file(relativePath: { eq: "2953211.jpg" }) {
+      imgOne: file(relativePath: { eq: "maxi.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      imgTwo: file(relativePath: { eq: "2414092.jpg" }) {
+      imgTwo: file(relativePath: { eq: "mobilemaxi.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -58,30 +61,51 @@ const Maximus = () => {
   return (
     <div className="project-container" id="maximus">
       <div className="project-title">
-        <h2 className="outer">Maximus</h2>
+        <h2 className="outer">
+          <span>M</span>
+          <span>a</span>
+          <span>x</span>
+          <br />
+          <span>i</span>
+          <span>m</span>
+          <span>u</span>
+          <br />
+          <span>s</span>
+        </h2>
       </div>
       <div className="grid-1">
         <div className="img event-1">
-          <div className="img_container">
+          <a
+            className="img_container"
+            href="https://maximus.inioluwa.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Img
               fluid={data.imgOne.childImageSharp.fluid}
               alt="Cat taking up an entire chair"
               fadeIn={true}
               placeholderStyle={{ backgroundColor: `black` }}
             />
-          </div>
+          </a>
           <p>
-            <a href="https://maximus.inioluwa.com" target="_blank">
+            <a
+              href="https://maximus.inioluwa.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Maximus
             </a>{" "}
-            is an e-commerce template for managing school records. A dark theme
-            mode, timetable, manage students, staff, and classroom records, mark
-            day to day attendance. No external UI components were used,
-            datatable, modals/pop ups coded by me
-            <span role="img" aria-label="true">
-              😊
-            </span>
-            .
+            is an e-commerce template, inspired by the{" "}
+            <a
+              href="https://gymshark.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Gymshark
+            </a>{" "}
+            website. Includes order history, login, register, product, and
+            collection pages.
           </p>
           <ul className="project-tag">
             <li>HTML/SCSS</li>
@@ -97,53 +121,16 @@ const Maximus = () => {
               placeholderStyle={{ backgroundColor: `black` }}
             />
           </div>
-          <p>
-            A web app for managing school records. A dark theme mode, timetable,
-            manage students, staff, and classroom records, mark day to day
-            attendance. No external UI components were used, datatable,
-            modals/pop ups coded by me
-            <span role="img" aria-label="true">
-              😊
-            </span>
-            .
-          </p>
-          <ul className="project-tag">
-            <li>React</li>
-            <li>Node.JS</li>
-            <li>Express</li>
-            <li>MongoDB</li>
-            <li>Git</li>
-            <li>PWA</li>
-          </ul>
+          <p> A sleek mobile navigation with a black and white theme.</p>
         </div>
-        <div className="img event-3">
+        {/* <div className="img event-3">
           <div className="img_container">
-            <Img
-              fluid={data.imgTwo.childImageSharp.fluid}
-              alt="Cat taking up an entire chair"
-              fadeIn={true}
-              placeholderStyle={{ backgroundColor: `black` }}
-            />
+            <video playsinline loop autoplay>
+              <source src={MaximusMp4} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
-          <p>
-            A web app for managing school records. A dark theme mode, timetable,
-            manage students, staff, and classroom records, mark day to day
-            attendance. No external UI components were used, datatable,
-            modals/pop ups coded by me
-            <span role="img" aria-label="true">
-              😊
-            </span>
-            .
-          </p>
-          <ul className="project-tag">
-            <li>React</li>
-            <li>Node.JS</li>
-            <li>Express</li>
-            <li>MongoDB</li>
-            <li>Git</li>
-            <li>PWA</li>
-          </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   )
