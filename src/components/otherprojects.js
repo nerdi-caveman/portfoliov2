@@ -94,7 +94,11 @@ const OtherProjects = () => {
             </a>
             <p>
               Helping people find products nearby and small businesses or startups
-              sell and offer services better.
+              sell and offer services better. <a
+                href="https://frontend-dev.netlify.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >View Project</a>
             </p>
             <ul className="project-tag">
               <li>Ongoing</li>
@@ -117,7 +121,7 @@ const OtherProjects = () => {
             </div>
             <p>Pure css and html toggle button and checkbox pack. <br/>
               <a
-                href="https://frontend-dev.netlify.com/"
+                href="https://github.com/nerdi-caveman/Clickr"
                 target="_blank"
                 rel="noopener noreferrer"
               >View on GitHub</a> </p>
@@ -138,7 +142,7 @@ const OtherProjects = () => {
             <p>
               A PHP routing library for POST and GET API calls. <br/>
               <a
-                href="https://frontend-dev.netlify.com/"
+                href="https://github.com/nerdi-caveman/pxpress"
                 target="_blank"
                 rel="noopener noreferrer"
               >View on GitHub</a>
