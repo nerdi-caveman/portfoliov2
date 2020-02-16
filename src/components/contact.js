@@ -64,13 +64,8 @@ const Contact = () => {
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noopener noreferrer" href="/">
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/nerdi-caveman/">
                 GitHub
-              </a>
-            </li>
-            <li>
-              <a target="_blank" rel="noopener noreferrer" href="/">
-                Twitter
               </a>
             </li>
             <li>
