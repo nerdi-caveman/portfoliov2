@@ -10,6 +10,7 @@ import Sima from "../components/sima"
 import About from "../components/about"
 import Maximus from "../components/maximus"
 import OtherProjects from "../components/otherprojects"
+import svg from "../images/softwareengineer2.svg";
 
 const IndexPage = () => {
   useEffect(() => {
@@ -24,18 +25,18 @@ const IndexPage = () => {
     }
   })
 
-  useEffect(() => {
-    const introText = document.querySelector(".intro-text")
-    let elemY = introText.getBoundingClientRect().y
-    window.addEventListener("scroll", function(e) {
-      const offset = elemY - introText.getBoundingClientRect().y
+  // useEffect(() => {
+  //   const introText = document.querySelector(".intro-text")
+  //   let elemY = introText.getBoundingClientRect().y
+  //   window.addEventListener("scroll", function(e) {
+  //     const offset = elemY - introText.getBoundingClientRect().y
 
-      const firstElement = introText.querySelector(".text-one")
-      const secondElement = introText.querySelector(".text-two")
-      firstElement.style.transform = `translateX(${27 - offset / 70}%)`
-      secondElement.style.transform = `translateX(-${30 - offset / 70}%)`
-    })
-  })
+  //     const firstElement = introText.querySelector(".text-one")
+  //     const secondElement = introText.querySelector(".text-two")
+  //     firstElement.style.transform = `translateX(${27 - offset / 70}%)`
+  //     secondElement.style.transform = `translateX(-${30 - offset / 70}%)`
+  //   })
+  // })
 
 
   // Cursor animation on project description text link
@@ -52,7 +53,7 @@ const IndexPage = () => {
         follower.style.transform = 'translate(5px, 5px) scale(1)'
       })
     }
-  })
+  }, [])
 
 
   return (
@@ -78,8 +79,7 @@ const IndexPage = () => {
         <Cursor />
         <section id="home">
           <div className="intro-text">
-            <h2 className="text-one">Software</h2>
-            <h2 className="text-two">Engineer</h2>
+          <img src ={svg} />
           </div>
         </section>
         <section id="project">

@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import ScrollMagic from "./scrollmagic"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import MaximusMp4 from "../images/Maximus.mp4"
 // import MaximusOgg from "../images/maximusogg.ogg"
 // import Video from "./gatsby-video"
 
