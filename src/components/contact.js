@@ -54,7 +54,7 @@ const Contact = () => {
         <div className="_social">
           <ul>
             <li>
-              <a target="_blank" rel="noopener noreferrer" href="/">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/nerdi_caveman/">
                 Instagram
               </a>
             </li>
