@@ -59,7 +59,7 @@ const Contact = () => {
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noopener noreferrer" href="/">
+              <a target="_blank" rel="noopener noreferrer" href="https://codepen.io/nerdi-caveman/">
                 CodePen
               </a>
             </li>
@@ -69,7 +69,7 @@ const Contact = () => {
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noopener noreferrer" href="/">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/inioluwa-sogelola-34a881185/">
                 Linkedin
               </a>
             </li>
