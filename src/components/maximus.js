@@ -108,6 +108,7 @@ const Maximus = () => {
           </p>
           <ul className="project-tag">
             <li>HTML/SCSS</li>
+            <li>Handlebars</li>
             <li>Javascript</li>
           </ul>
         </div>
