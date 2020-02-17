@@ -51,6 +51,26 @@ header {
                     top: -2px;
                     position: absolute;
                 }
+                a{
+                    color: $deep-teal;
+                    text-decoration: none;
+                    position: relative;
+                    font-family: Greycliff_CF_Medium, sans-serif;
+                    font-weight: 500;
+                    // border: 1px solid $deep-teal;
+                    // padding: 8px 12px;
+                    // margin-right: -5px;
+
+                    &::before{
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        bottom: -2px;
+                        background: $deep-teal;
+                        width: 100%;
+                        height: 2px;
+                    }
+                }
             }
         }
 

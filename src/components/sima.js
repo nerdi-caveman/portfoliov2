@@ -115,7 +115,14 @@ const Sima = () => {
                 Spotify profile
               </a>{" "}
               is a web app for visualizing personalized your Spotify data. View your top
-              artists, top tracks, basic user information and more.
+              artists, top tracks, basic user information and more.{" "}
+              <a
+                href="https://sima.netlify.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GITHUB
+              </a>
             </p>
             <ul className="project-tag">
               <li>React</li>

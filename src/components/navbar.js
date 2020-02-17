@@ -14,7 +14,7 @@ const Navbar = () => {
   }
 
   useEffect(() => {
-    const nav = document.querySelector('nav')
+    const nav = document.querySelector("nav")
     const follower = document.getElementById("cursor-follower")
 
     nav.addEventListener("mouseover", () => {
@@ -30,7 +30,11 @@ const Navbar = () => {
       <header>
         <div id="logo">
           <Link to="/">
-          <img src ={Logo} alt ="logo" style ={{width:'100px', marginTop:"7px"}}/>
+            <img
+              src={Logo}
+              alt="logo"
+              style={{ width: "100px", marginTop: "7px" }}
+            />
           </Link>
         </div>
         <nav
@@ -52,6 +56,11 @@ const Navbar = () => {
             </li>
             <li>
               CONTACT <sup>04</sup>
+            </li>
+            <li>
+              <a href="" download>
+                RESUME
+              </a>
             </li>
           </ul>
         </nav>
