@@ -1,3 +1,4 @@
+"use-strict"
 const ScrollMagic = function({ trigger, hook = 0.5 }) {
   this.windowHeight = window.innerHeight
 
@@ -33,19 +34,6 @@ ScrollMagic.prototype.on = function(inCallback, outCallback = null) {
   const that = this
   this.inCallback = inCallback
   this.outCallback = outCallback
-
-  //   function init(trigger) {
-  //     console.log(that.trigger.getBoundingClientRect().y)
-  //     if (trigger <= that.hook) {
-  //         that.inCallback()
-  //     }
-
-  //     if (trigger > that.hook) {
-  //         if(that.outCallback) {
-  //             that.outCallback()
-  //         }
-  //     }
-  //   }
   this.init(this.trigger.getBoundingClientRect().y)
 
   window.addEventListener("scroll", function() {

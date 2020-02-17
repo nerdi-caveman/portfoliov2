@@ -3,12 +3,13 @@ import ScrollMagic from "./scrollmagic"
 import { Parallax, ParallaxProvider } from "react-scroll-parallax"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import gif from "../images/wink.gif"
+import main from "../images/spotifymain.png"
 
 const Sima = () => {
   const data = useStaticQuery(graphql`
     query {
-
-      imgOne: file(relativePath: { eq: "sima1test.png" }) {
+      imgOne: file(relativePath: { eq: "spotifymain.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -16,14 +17,20 @@ const Sima = () => {
         }
       }
 
-      imgTwo: file(relativePath: { eq: "PMVCYM0.jpg" }) {
+      imgTwo: file(relativePath: { eq: "spotifymobile.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      
+      imgThree: file(relativePath: { eq: "wink.gif" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -71,10 +78,14 @@ const Sima = () => {
           <Parallax offset={[-50, 50]}>
             <h2 className="outer">
               <span>S</span>
-              <span>I</span>
-              <span>M</span>
+              <span>P</span>
+              <span>0</span>
               <br />
-              <span>A</span>
+              <span>T</span>
+              <span>I</span>
+              <span>F</span>
+              <br />
+              <span>Y</span>
             </h2>
           </Parallax>
           {/* <h2 className="inner">SIMA SMS</h2> */}
@@ -87,12 +98,13 @@ const Sima = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Img
+              <img src={main} />
+              {/* <Img
                 fluid={data.imgOne.childImageSharp.fluid}
                 alt="Cat taking up an entire chair"
                 fadeIn={true}
                 placeholderStyle={{ backgroundColor: `black` }}
-              />
+              /> */}
             </a>
             <p>
               <a
@@ -100,20 +112,18 @@ const Sima = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Sima
+                Spotify profile
               </a>{" "}
-              is a web app for managing school records. A dark theme mode,
-              timetable, manage students, staff, and classroom records, mark day
-              to day attendance.
+              is a web app for visualizing personalized your Spotify data. View your top
+              artists, top tracks, basic user information and more.
             </p>
             <ul className="project-tag">
               <li>React</li>
               <li>Node.JS</li>
               <li>Express</li>
-              <li>MongoDB</li>
+              <li>Spotify Web API</li>
               <li>SASS</li>
-              <li>Git</li>
-              <li>PWA</li>
+              <li>Typescript</li>
             </ul>
           </div>
           <div className="img event-2">
@@ -129,16 +139,17 @@ const Sima = () => {
           </div>
           <div className="img culture-1">
             <div className="img_container">
-              <Img
-                fluid={data.imgTwo.childImageSharp.fluid}
-                alt="Cat taking up an entire chair"
-                fadeIn={true}
-                placeholderStyle={{ backgroundColor: `black` }}
-              />
+              <img src={gif} />
             </div>
             <p>
-              No external UI components were used, datatable, modals/pop ups
-              coded by me
+              Inspired by{" "}
+              <a
+                href="https://brittanychiang.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                brittany chiang
+              </a>
               <span role="img" aria-labelledby="icon">
                 😊
               </span>
