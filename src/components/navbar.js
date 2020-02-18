@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react"
 import Logo from "../images/portfoliologo3.svg"
 import "../styles/components/navbar.scss"
 import { Link } from "gatsby"
+import resume from '../downloads/resume.pdf' 
 
 const Navbar = () => {
   const ref = useRef()
@@ -58,7 +59,7 @@ const Navbar = () => {
               CONTACT <sup>04</sup>
             </li>
             <li>
-              <a href="" download>
+              <a href={resume} download>
                 RESUME
               </a>
             </li>
