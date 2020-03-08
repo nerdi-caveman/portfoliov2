@@ -19,11 +19,12 @@ body {
     }
 
     &.simaActive {
-        background: $brownMaroon;
+        background: $yellow;
 
-        .project-title h2 {
-            color: #1f202c !important;
-        }
+    }
+
+    &.faceformActive {
+        background: $brownMaroon;
 
         #cursor {
             background-color: #fff;
@@ -37,6 +38,7 @@ body {
             color: $deep-purple !important;
         }
     }
+
 
     &.otherProjectActive {
         background: $orange;
@@ -225,7 +227,31 @@ html {
                 margin-top: 50vh;
 
                 * {
+                    color: #f1f1f1;
+                }
+                .project-title h2 *{
+                    color: $dimwhite !important;
+                }
+
+                .img {
+                    a {
+
+                        &::before,
+                        &::after {
+                            background: $dimwhite;
+                        }
+
+                    }
+                }
+            }
+
+            &#faceform {
+                * {
                     color: #1f202c;
+                }
+
+                .project-title h2 * {
+                    color: #1f202c !important;
                 }
 
                 .img {

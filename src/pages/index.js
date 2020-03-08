@@ -11,6 +11,7 @@ import About from "../components/about"
 import Maximus from "../components/maximus"
 import OtherProjects from "../components/otherprojects"
 import svg from "../images/softwareengineer2.svg";
+import Faceform from "../components/faceform"
 
 const IndexPage = () => {
   useEffect(() => {
@@ -86,6 +87,7 @@ const IndexPage = () => {
           <div className="projects">
             <About />
             <Sima />
+            <Faceform />
             <Maximus />
             <OtherProjects/>
           </div>

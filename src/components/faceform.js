@@ -5,17 +5,17 @@ import Img from "gatsby-image"
 // import MaximusOgg from "../images/maximusogg.ogg"
 // import Video from "./gatsby-video"
 
-const Maximus = () => {
+const Faceform = () => {
   const data = useStaticQuery(graphql`
     query {
-      imgOne: file(relativePath: { eq: "maxi.png" }) {
+      imgOne: file(relativePath: { eq: "faceform1.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      imgTwo: file(relativePath: { eq: "mobilemaxi.png" }) {
+      imgTwo: file(relativePath: { eq: "faceform2.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -26,23 +26,23 @@ const Maximus = () => {
   `)
 
   useEffect(() => {
-    const trigger = document.querySelector("#maximus")
+    const trigger = document.querySelector("#faceform")
 
     const mainScene = new ScrollMagic({ trigger, hook: 0.6 })
 
     mainScene.on(
       function() {
-        document.querySelector("body").classList.add("maximusActive")
+        document.querySelector("body").classList.add("faceformActive")
       },
       function() {
-        document.querySelector("body").classList.remove("maximusActive")
+        document.querySelector("body").classList.remove("faceformActive")
       }
     )
   })
 
   //   Animate in images
   useEffect(() => {
-    const triggers = document.querySelectorAll("#maximus img")
+    const triggers = document.querySelectorAll("#faceform img")
     for (let i in Array.from(triggers)) {
       const trigger = triggers[i]
       const mainScene = new ScrollMagic({ trigger, hook: 0.75 })
@@ -58,25 +58,26 @@ const Maximus = () => {
     }
   })
   return (
-    <div className="project-container" id="maximus">
+    <div className="project-container" id="faceform">
       <div className="project-title">
         <h2 className="outer">
-          <span>M</span>
+          <span>F</span>
           <span>a</span>
-          <span>x</span>
+          <span>c</span>
           <br />
-          <span>i</span>
+          <span>e</span>
+          <span>f</span>
+          <span>o</span>
+          <br />
+          <span>r</span>
           <span>m</span>
-          <span>u</span>
-          <br />
-          <span>s</span>
         </h2>
       </div>
-      <div className="grid-2">
+      <div className="grid-1">
         <div className="img event-1">
           <a
             className="img_container"
-            href="https://maximus.inioluwa.com"
+            href="https://faceform.netlify.com"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -88,28 +89,24 @@ const Maximus = () => {
             />
           </a>
           <p>
+            Create lightweight interactive surveys and forms with {" "}
             <a
-              href="https://maximus.inioluwa.com"
+              href="https://faceform.netlify.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Maximus
-            </a>{" "}
-            is an e-commerce template, inspired by the{" "}
-            <a
-              href="https://gymshark.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Gymshark
-            </a>{" "}
-            website. Includes order history, login, register, product, and
-            collection pages.
+              Faceform
+            </a>. Lightweight, easy to use, and great UX.
           </p>
           <ul className="project-tag">
-            <li>HTML/SCSS</li>
-            <li>Handlebars</li>
-            <li>Javascript</li>
+              <li>React</li>
+              <li>Node.JS</li>
+              <li>MongoDB</li>
+              <li>Google Login API</li>
+              <li>Express</li>
+              <li>Hooks</li>
+              <li>SASS</li>
+              <li>Typescript</li>
           </ul>
         </div>
         <div className="img event-2">
@@ -121,7 +118,6 @@ const Maximus = () => {
               placeholderStyle={{ backgroundColor: `black` }}
             />
           </div>
-          <p> A sleek mobile navigation with a black and white theme.</p>
         </div>
         {/* <div className="img event-3">
           <div className="img_container">
@@ -135,4 +131,4 @@ const Maximus = () => {
     </div>
   )
 }
-export default Maximus
+export default Faceform
