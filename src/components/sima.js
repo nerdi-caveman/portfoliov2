@@ -94,7 +94,7 @@ const Sima = () => {
           <div className="img event-1">
             <a
               className="img_container"
-              href="https://sima.netlify.com"
+              href="https://my-spotify-profile.herokuapp.com.netlify.com"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -117,7 +117,7 @@ const Sima = () => {
               is a web app for visualizing personalized your Spotify data. View your top
               artists, top tracks, basic user information and more.{" "}
               <a
-                href="https://sima.netlify.com"
+                href="https://my-spotify-profile.herokuapp.com.netlify.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
